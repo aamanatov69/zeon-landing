@@ -14,9 +14,9 @@ const Header = () => {
   const glow = "#a21caf";
 
   return (
-    <header className="w-full max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between py-6 bg-black/40 backdrop-blur-md rounded-b-xl z-20 relative">
+    <header className="w-full max-w-7xl mx-auto px-2 sm:px-8 flex items-center justify-between py-4 sm:py-6 bg-black/40 backdrop-blur-md rounded-b-xl z-20 relative">
       <Logo />
-      <nav className="hidden md:flex flex-1 justify-center gap-8 text-[15px] text-gray-200 font-medium">
+      <nav className="hidden md:flex flex-1 justify-center gap-4 sm:gap-8 text-[15px] text-gray-200 font-medium">
         {menuItems.map((item) => (
           <a
             key={item.label}

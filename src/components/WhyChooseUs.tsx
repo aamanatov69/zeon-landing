@@ -45,8 +45,8 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <section className="py-20 text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-white">
+    <section className="py-10 sm:py-20 text-center px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-8 text-white">
         Why Choose <span className="text-gray-400">Zion Labs?</span>
       </h2>
       <div className="relative max-w-xl mx-auto">
@@ -104,15 +104,15 @@ const WhyChooseUs = () => {
             &#8592;
           </button>
           {/* Индикаторы */}
-        <div className="flex justify-center gap-2 mt-3">
-          {testimonials.map((_, i) => (
-            <span
-              key={i}
-              className="inline-block w-2 h-2 rounded-full"
-              style={{ background: i === index ? glow : "#444" }}
-            />
-          ))}
-        </div>
+          <div className="flex justify-center gap-2 mt-3">
+            {testimonials.map((_, i) => (
+              <span
+                key={i}
+                className="inline-block w-2 h-2 rounded-full"
+                style={{ background: i === index ? glow : "#444" }}
+              />
+            ))}
+          </div>
           <button
             onClick={next}
             className="w-10 h-10 flex items-center justify-center rounded-full font-bold transition"
@@ -134,7 +134,6 @@ const WhyChooseUs = () => {
             &#8594;
           </button>
         </div>
-        
       </div>
     </section>
   );

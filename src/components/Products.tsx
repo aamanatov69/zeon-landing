@@ -22,11 +22,11 @@ const products = [
 
 const Products = () => {
   return (
-    <section className="py-24 text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-16 text-white">
+    <section className="py-12 sm:py-24 text-center px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-16 text-white">
         Our Products
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 max-w-6xl mx-auto px-2 sm:px-4">
         {products.map((p) => (
           <div
             key={p.title}
