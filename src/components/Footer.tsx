@@ -1,15 +1,31 @@
 const Footer = () => {
+  const glow = "#a21caf";
   return (
-    <footer className="w-full py-8 px-4 bg-black/60 text-center text-gray-400 text-sm border-t border-[#10b981]/20 mt-12">
+    <footer
+      className="w-full py-8 px-4 bg-black/60 text-center text-gray-400 text-sm mt-12"
+      style={{ borderTop: `2px solid ${glow}33` }}
+    >
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <span className="text-gray-300">
-          © {new Date().getFullYear()} Zeon Labs. All rights reserved.
+          © {new Date().getFullYear()} Zion Labs. All rights reserved.
         </span>
         <div className="flex gap-4 justify-center">
-          <a href="#" className="hover:text-[#10b981] transition">
+          <a
+            href="#"
+            className="transition"
+            style={{ color: undefined }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = glow)}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "")}
+          >
             Privacy Policy
           </a>
-          <a href="#" className="hover:text-[#10b981] transition">
+          <a
+            href="#"
+            className="transition"
+            style={{ color: undefined }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = glow)}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "")}
+          >
             Terms of Service
           </a>
         </div>

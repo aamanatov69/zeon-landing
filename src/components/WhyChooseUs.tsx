@@ -31,6 +31,7 @@ const AUTO_SCROLL_INTERVAL = 3000;
 
 const WhyChooseUs = () => {
   const [index, setIndex] = useState(0);
+  const glow = "#a21caf";
   const prev = () =>
     setIndex((i) => (i === 0 ? testimonials.length - 1 : i - 1));
   const next = () =>
@@ -46,7 +47,7 @@ const WhyChooseUs = () => {
   return (
     <section className="py-20 text-center">
       <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-white">
-        Why Choose <span className="text-gray-400">Zeon Labs?</span>
+        Why Choose <span className="text-gray-400">Zion Labs?</span>
       </h2>
       <div className="relative max-w-xl mx-auto">
         <div className="overflow-hidden">
@@ -56,11 +57,18 @@ const WhyChooseUs = () => {
           >
             {testimonials.map((t, i) => (
               <div
-                key={t.name}
-                className="min-w-full bg-[#23272f] border-2 border-[#10b981] rounded-2xl p-8 flex flex-col items-start shadow-[0_0_30px_#10b98133] mx-auto"
+                key={t.name + i}
+                className="min-w-full bg-[#23272f] rounded-2xl p-8 flex flex-col items-start mx-auto"
+                style={{
+                  border: `2px solid ${glow}`,
+                  boxShadow: `0 0 30px ${glow}33`,
+                }}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#222] border-2 border-[#10b981] flex items-center justify-center text-white font-bold text-lg">
+                  <div
+                    className="w-12 h-12 rounded-full bg-[#222] flex items-center justify-center text-white font-bold text-lg"
+                    style={{ border: `2px solid ${glow}` }}
+                  >
                     {t.avatar}
                   </div>
                   <div>
@@ -73,34 +81,60 @@ const WhyChooseUs = () => {
             ))}
           </div>
         </div>
-        {/* Навигация
+        {/* Навигация */}
         <div className="flex justify-center gap-4 mt-6">
           <button
             onClick={prev}
-            className="w-10 h-10 flex items-center justify-center rounded-full border border-[#10b981] text-[#10b981] hover:bg-[#10b981] hover:text-white transition shadow-[0_0_10px_#10b981]"
+            className="w-10 h-10 flex items-center justify-center rounded-full font-bold transition"
+            style={{
+              border: `2px solid ${glow}`,
+              color: glow,
+              boxShadow: `0 0 10px ${glow}`,
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = glow;
+              e.currentTarget.style.color = "#fff";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "";
+              e.currentTarget.style.color = glow;
+            }}
             aria-label="Previous"
           >
             &#8592;
           </button>
-          <button
-            onClick={next}
-            className="w-10 h-10 flex items-center justify-center rounded-full border border-[#10b981] text-[#10b981] hover:bg-[#10b981] hover:text-white transition shadow-[0_0_10px_#10b981]"
-            aria-label="Next"
-          >
-            &#8594;
-          </button>
-        </div> */}
-        {/* Индикаторы */}
+          {/* Индикаторы */}
         <div className="flex justify-center gap-2 mt-3">
           {testimonials.map((_, i) => (
             <span
               key={i}
-              className={`inline-block w-2 h-2 rounded-full ${
-                i === index ? "bg-[#10b981]" : "bg-gray-600"
-              }`}
+              className="inline-block w-2 h-2 rounded-full"
+              style={{ background: i === index ? glow : "#444" }}
             />
           ))}
         </div>
+          <button
+            onClick={next}
+            className="w-10 h-10 flex items-center justify-center rounded-full font-bold transition"
+            style={{
+              border: `2px solid ${glow}`,
+              color: glow,
+              boxShadow: `0 0 10px ${glow}`,
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = glow;
+              e.currentTarget.style.color = "#fff";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "";
+              e.currentTarget.style.color = glow;
+            }}
+            aria-label="Next"
+          >
+            &#8594;
+          </button>
+        </div>
+        
       </div>
     </section>
   );

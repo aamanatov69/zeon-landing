@@ -30,16 +30,16 @@ const Products = () => {
         {products.map((p) => (
           <div
             key={p.title}
-            className="bg-[#23272f] border-2 border-[#10b981] rounded-2xl p-10 shadow-[0_0_30px_#10b98133] flex flex-col items-center transition hover:shadow-[0_0_40px_#10b98199]"
+            className="bg-[#23272f] border-2 border-[#a21caf] rounded-2xl p-10 shadow-[0_0_30px_#a21caf33] flex flex-col items-center transition hover:shadow-[0_0_40px_#a21caf99]"
           >
             <img
               src={p.icon}
-              className="h-20 mb-8 drop-shadow-[0_0_10px_#10b981]"
+              className="h-25 mb-9 drop-shadow-[0_0_5px_#a21caf]"
               alt={p.title}
             />
             <h3 className="text-xl font-semibold mb-3 text-white">{p.title}</h3>
             <p className="text-gray-300 mb-8 text-base">{p.text}</p>
-            <button className="mt-auto border border-[#10b981] px-6 py-2 rounded text-[#10b981] font-semibold shadow-[0_0_10px_#10b981] hover:bg-[#10b981] hover:text-white transition">
+            <button className="mt-auto border border-[#a21caf] px-6 py-2 rounded text-[#a21caf] font-semibold shadow-[0_0_10px_#a21caf] hover:bg-[#a21caf] hover:text-white transition">
               Learn More
             </button>
           </div>

@@ -1,6 +1,6 @@
 <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 35 L50 20 L80 35 L80 65 L50 80 L20 65 Z" stroke="#00E5FF" stroke-width="3" filter="url(#glow)"></path>
-<path d="M40 45 L50 55 L60 45" stroke="#00E5FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M20 35 L50 20 L80 35 L80 65 L50 80 L20 65 Z" stroke="#a21caf" stroke-width="3" filter="url(#glow)"></path>
+<path d="M40 45 L50 55 L60 45" stroke="#a21caf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
 <defs>
 <filter id="glow">
 <feGaussianBlur stdDeviation="3" result="coloredBlur"></feGaussianBlur>
@@ -11,3 +11,4 @@
 </filter>
 </defs>
 </svg>
+

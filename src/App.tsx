@@ -6,14 +6,12 @@ import WhyChooseUs from "./components/WhyChooseUs";
 
 function App() {
   return (
-    <div className="neon-stars-bg">
-      <div className="bg-[#02050A]/80 text-white mx-auto px-4 sm:px-6 md:px-8 lg:px-10 relative z-10">
-        <Header />
-        <Hero />
-        <Products />
-        <WhyChooseUs />
-        <Footer />
-      </div>
+    <div className="bg-[#02050A]/80 text-white mx-auto px-4 sm:px-6 md:px-8 lg:px-10 relative z-10">
+      <Header />
+      <Hero />
+      <Products />
+      <WhyChooseUs />
+      <Footer />
     </div>
   );
 }
